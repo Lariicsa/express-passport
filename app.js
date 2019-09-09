@@ -35,6 +35,10 @@ app.use(session({
   secret: process.env.CHEESE
 }))
 
+//Passport setup !! in this estrict order
+app.use(passport.initialize())
+app.use(passport.session())
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
