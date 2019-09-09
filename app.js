@@ -27,6 +27,14 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
+//Config Session setup
+app.use(session({
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24
+  },
+  secret: process.env.CHEESE
+}))
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
