@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const PLM = require('pasport-local-mongoose') //passsport local mongoose
+const PLM = require('passport-local-mongoose') //passsport local mongoose
 const userSchema = new Schema(
 	{
 		email: String,
