@@ -10,6 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 //Config PASSPORT
 const passport = require('./config/passport')
+const session = require('express-session')
 
 
 mongoose
