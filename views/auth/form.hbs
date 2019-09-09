@@ -4,6 +4,29 @@
 		<hr>
 		<div class="box">
 			<form action="{{action}}" method="POST">
+				{{#if register}}
+				<div class="field">
+					<label class="label">Name:</label>
+					<div class="control has-icons-left has-icons-right">
+						<input class="input" type="text" name="name" placeholder="Your Name">
+						<span class="icon is-small is-left">
+							<i class="fas fa-user"></i>
+						</span>
+					</div>
+					<p class="help is-danger">{{err}}</p>
+				</div>
+
+				<div class="field">
+					<label class="label">Last Name:</label>
+					<div class="control has-icons-left has-icons-right">
+						<input class="input" type="text" name="lastname" placeholder="Your Name">
+						<span class="icon is-small is-left">
+							<i class="fas fa-user"></i>
+						</span>
+					</div>
+					<p class="help is-danger">{{err}}</p>
+				</div>
+				{{/if}}
 				<div class="field">
 					<label class="label">Email:</label>
 					<div class="control has-icons-left has-icons-right">
@@ -12,13 +35,13 @@
 							<i class="fas fa-envelope"></i>
 						</span>
 					</div>
-					<p class="help is-danger">This email is invalid</p>
+					<p class="help is-danger">{{err}}</p>
 				</div>
 
 				<div class="field">
 					<label class="label">Password:</label>
 					<div class="control has-icons-left has-icons-right">
-						<input class="input" type="password" placeholder="password···">
+						<input class="input" type="password" placeholder="password···" name="password">
 						<span class="icon is-small is-left">
 							<i class="fas fa-key"></i>
 						</span>
