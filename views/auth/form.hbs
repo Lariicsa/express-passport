@@ -5,7 +5,8 @@
 		<div class="box">
 			<form action="{{action}}" method="POST">
 				{{#if register}}
-				<div class="field">
+				<div class="field-body">
+					<div class="field">
 					<label class="label">Name:</label>
 					<div class="control has-icons-left has-icons-right">
 						<input class="input" type="text" name="name" placeholder="Your Name">
@@ -21,10 +22,10 @@
 					<div class="control has-icons-left has-icons-right">
 						<input class="input" type="text" name="lastname" placeholder="Your Name">
 						<span class="icon is-small is-left">
-							<i class="fas fa-user"></i>
 						</span>
 					</div>
 					<p class="help is-danger">{{err}}</p>
+				</div>
 				</div>
 				{{/if}}
 				<div class="field">
@@ -50,7 +51,6 @@
 
 				<div class="buttons is-right">
 					<input type="submit" value="{{button}}" class="button is-fullwidth is-info is-hovered">
-						<span>Login</span>
 				</div>
 			</form>
 		</div>
